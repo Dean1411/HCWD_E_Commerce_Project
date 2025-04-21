@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiddies Fashion</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;900&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="home.html">
+                <img  class="logo" src="./images/logo/logo.png" alt="Kiddies Fashion Logo">
+            </a>            
+        </div>
+
+        <nav class="navbar">
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="clothes.html">Clothes</a>
+                <a href="shoes.html">Shoes</a>
+                <a href="specials.html">Specials</a>
+            </div>
+
+            <div class="nav-icons">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85z"/>
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                </svg>
+
+                <div class="cart-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart4 cart-icon" viewBox="0 0 16 16" onclick="toggleCart()">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5z"/>
+                    </svg>
+                    <span id="cart-count">0</span>
+
+                    <div id="cart-dropdown" class="cart-dropdown">
+                        <h3>Shopping Cart</h3>
+                        <ul id="cart-list"></ul>
+                        <p><strong>Total: R<span id="cart-total">0.00</span></strong></p>
+                        <button class="clear" onclick="clearCart()">Clear Cart</button>
+                        <button class="checkout" onclick="checkout()">Check Out</button>                    
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="banner-section">
+        <div class="image-container" id="banner-images">
+            <img src="./images/logo/Cargo Hoodie & Tapered Joggers.png" alt="Cargo Hoodie">
+            <img src="./images/logo/Hoodie & Tapered Skinny Joggers.png" alt="Hoodie Joggers">
+            <img src="./images/logo/Logo Tshirt with Resistain.png" alt="Logo Tshirt">
+            <img src="./images/logo/Reversible Faux Fur Coat with Satin Logo.png" alt="Faux Fur Coat">
+            <img src="./images/logo/fur denim with pants 2.png" alt="Denim Outfit">
+        </div>
+    </section>
+
+    <section class="specials-container">
+        <h2>Specials Kiddies</h2>
+
+        <div class="specials" id="specials">
+            <div class="product">
+                <img id="img-Hoody-SweatPants" src="./images/clothes/Boy Casual Hoody & Sweat Pants Set Grey.png" alt="HoodySweatPants">
+                <p class="description">Boy Casual Hoody & Sweat Pants Set</p>
+                <p class="price">
+                    <span class="original-price">R395.95</span>
+                    <span class="sale-price">R299.95</span>
+                </p>
+                <label for="size-Hoody-SweatPants">Size</label>
+                <select id="size-Hoody-SweatPants" class="product-size">
+                    <option value="">Select Size</option>
+                    <option value="S">2-3</option>
+                    <option value="M">4-5</option>
+                    <option value="L">6-7</option>
+                    <option value="XL">8-9</option>
+                </select>
+                <label for="color-Hoody-SweatPants">Color</label>
+                <select id="color-Hoody-SweatPants" class="product-color"
+                        onchange="updateProductImage('Hoody-SweatPants')"
+                        data-img-grey="./images/clothes/Boy Casual Hoody & Sweat Pants Set Grey.png"
+                        data-img-black="./images/clothes/Boy Casual Hoody & Sweat Pants Set Black.png">
+                    <option value="">Select Color</option>
+                    <option value="grey">Gray</option>
+                    <option value="black">Black</option>
+                </select>
+                <button class="add-to-cart" data-name="Hoody & Sweat Pants" data-price="195.95">Add to Cart</button>
+            </div>
+            
+
+            <div class="product">
+                <img id="img-BoyDenimJacketandJeans" src="./images/clothes/Boy Denim Jacket and Jeans Blue.png" alt="Boy Denim Jacket and Jeans">
+                <p class="description">Boy Denim Jacket and Jeans</p>
+                <p class="price">
+                    <span class="original-price">R466.00</span>
+                    <span class="sale-price">R395.00</span>
+                </p>
+                <label for="size-BoyDenimJacketandJeans">Size</label>
+                <select id="size-BoyDenimJacketandJeans" class="product-size">
+                    <option value="">Select Size</option>
+                    <option value="S">2-3</option>
+                    <option value="M">4-5</option>
+                    <option value="L">6-7</option>
+                    <option value="XL">8-9</option>
+                </select>
+                <label for="color-BoyDenimJacketandJeans">Color</label>
+                <select id="color-BoyDenimJacketandJeans" class="product-color"
+                        onchange="updateProductImage('BoyDenimJacketandJeans')"
+                        data-img-blue="./images/clothes/Boy Denim Jacket and Jeans Blue.png"
+                        data-img-grey="./images/clothes/Boy Denim Jacket and Jeans.png">
+                    <option value="">Select Color</option>
+                    <option value="blue">Blue</option>
+                    <option value="grey">Grey</option>
+                </select>
+                <button class="add-to-cart" data-name="BoyDenim Jacket and Jeans" data-price="149.95">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img id="img-GirlsLongSleeveandPantsSet" src="./images/clothes/Girls Long Sleeve and Pants Set Pink.png" alt="Girls Long Sleeve and Pants Set">
+                <p class="description">Girls Long Sleeve and Pants Set</p>
+                <p class="price">
+                    <span class="original-price">R349.95</span>
+                    <span class="sale-price">R249.95</span>
+                </p>
+                <label for="size-GirlsLongSleeveandPantsSet">Size</label>
+                <select id="size-GirlsLongSleeveandPantsSet" class="product-size">
+                    <option value="">Select Size</option>
+                    <option value="S">2-3</option>
+                    <option value="M">4-5</option>
+                    <option value="L">6-7</option>
+                    <option value="XL">8-9</option>
+                </select>
+                <label for="color-GirlsLongSleeveandPantsSet">Color</label>
+                <select id="color-GirlsLongSleeveandPantsSet" class="product-color"
+                        onchange="updateProductImage('GirlsLongSleeveandPantsSet')"
+                        data-img-pink="./images/clothes/Girls Long Sleeve and Pants Set Pink.png"
+                        data-img-green="./images/clothes/Girls Long Sleeve and Pants Set Green.png">
+                    <option value="">Select Color</option>
+                    <option value="pink">Pink</option>
+                    <option value="green">Green</option>
+                </select>
+                <button class="add-to-cart" data-name="Girls Long Sleeve and Pants Set" data-price="149.95">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/logo/Logo Tshirt with Resistain.png" alt="Logo T-Shirt with Resistain">
+                <p class="description">Logo T-Shirt with Resistain</p>
+                <p class="price"><span class="original-price">R279.95</span> <span class="sale-price">R199.95</span></p>
+                <label for="size-ResistainLogoTShirt">Size</label>
+                <select id="size-ResistainLogoTShirt" class="product-size">
+                    <option value="">Select Size</option>
+                    <option value="XS">8-10</option>
+                    <option value="S">10-12</option>
+                    <option value="M">13-14</option>
+                    <option value="L">15-16</option>
+                </select>
+                <label for="color-ResistainLogoTShirt">Color</label>
+                <select id="color-ResistainLogoTShirt" class="product-color"
+                        onchange="updateProductImage('ResistainLogoTShirt')"
+                        data-img-green="./images/logo/Logo Tshirt with Resistain.png"
+                        data-img-black="./images/logo/Logo Tshirt with Resistain black.png">
+                    <option value="">Select Color</option>
+                    <option value="green">Green</option>
+                    <option value="black">Black</option>
+                </select>
+                <button class="add-to-cart" data-name="Resistain Logo T-Shirt" data-price="199.95">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/clothes/Boy Ribbed High Neck.png" alt="Boy Ribbed High Neck">
+                <p class="description">Boy Ribbed High Neck</p>
+                <p class="price"><span class="original-price">R279.95</span> <span class="sale-price">R199.95</span></p>
+                <label for="size-RibbedHighNeck">Size</label>
+                <select id="size-RibbedHighNeck" class="product-size">
+                    <option value="">Select Size</option>
+                    <option value="XS">8-10</option>
+                    <option value="S">10-12</option>
+                    <option value="M">13-14</option>
+                    <option value="L">15-16</option>
+                </select>
+                <label for="color-RibbedHighNeck">Color</label>
+                <select id="color-RibbedHighNeck" class="product-color"
+                        onchange="updateProductImage('RibbedHighNeck')"
+                        data-img-blue="./images/clothes/Boy Ribbed High Neck.png"
+                        data-img-burgundy="./images/clothes/Boy Ribbed High Neck Burgundy.png">
+                    <option value="">Select Color</option>
+                    <option value="blue">Blue</option>
+                    <option value="burgundy">burgundy</option>
+                </select>
+                <button class="add-to-cart" data-name="Boy Ribbed High Neck" data-price="199.95">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/clothes/Girl Cartoon Sweat Set Khaki.png" alt="Girl Cartoon Sweat Set">
+                <p class="description">Girl Cartoon Sweat Set Khaki</p>
+                <p class="price"><span class="original-price">R279.95</span> <span class="sale-price">R199.95</span></p>
+                <label for="size-CartoonSweatSet">Size</label>
+                <select id="size-CartoonSweatSet" class="product-size">
+                    <option value="">Select Size</option>
+                    <option value="XS">8-10</option>
+                    <option value="S">10-12</option>
+                    <option value="M">13-14</option>
+                    <option value="L">15-16</option>
+                </select>
+                <label for="color-CartoonSweatSet">Color</label>
+                <select id="color-CartoonSweatSet" class="product-color"
+                        onchange="updateProductImage('CartoonSweatSet')"
+                        data-img-khaki="./images/clothes/Girl Cartoon Sweat Set Khaki.png"
+                        data-img-pink="./images/clothes/Girl Cartoon Sweat Set Pink.png">
+                    <option value="">Select Color</option>
+                    <option value="khaki">Khaki</option>
+                    <option value="pink">Pink</option>
+                </select>
+                <button class="add-to-cart" data-name="Resistain Logo T-Shirt" data-price="199.95">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="banner2">
+        <div class="second-banner">
+            <img src="./images/banners/Banner.png" alt="Fashion Banner">
+        </div>
+    </section>
+    <footer>
+        <p class="copyright">© Dean Aschendorf | All Rights Reserved</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

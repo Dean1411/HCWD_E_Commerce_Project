@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiddies Fashion</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;900&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="home.html">
+                <img  class="logo" src="./images/logo/logo.png" alt="Kiddies Fashion Logo">
+            </a>            
+        </div>
+
+        <nav class="navbar">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="clothes.html" class="active">Clothes</a>
+                <a href="shoes.html">Shoes</a>
+                <a href="specials.html">Specials</a>
+            </div>
+
+            <div class="nav-icons">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85z"/>
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                </svg>
+
+                <div class="cart-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart4 cart-icon" viewBox="0 0 16 16" onclick="toggleCart()">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5z"/>
+                    </svg>
+                    <span id="cart-count">0</span>
+
+                    <div id="cart-dropdown" class="cart-dropdown">
+                        <h3>Shopping Cart</h3>
+                        <ul id="cart-list"></ul>
+                        <p><strong>Total: R<span id="cart-total">0.00</span></strong></p>
+                        <button class="clear" onclick="clearCart()">Clear Cart</button>
+                        <button class="checkout" onclick="checkout()">Check Out</button> 
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="specials-container">
+        <h2>Kids Clothing</h2>
+        <section class="banner2">
+            <div class="second-banner">
+                <img src="./images/banners/Banner3.png" alt="Fashion Banner">
+            </div>
+        </section>
+
+        <div class="specials" id="specials">
+            <div class="product">
+                <img src="./images/specials/Camel_Top-.jpg" alt="Camel Top">
+                <p class="description">Camel Top</p>
+                <p class="price">
+                    <span class="original-price">R195.95</span>
+                    <span class="sale-price">R159.95</span>
+                </p>
+
+                <label for="size-CamelTop">Size</label>
+                <select id="size-CamelTop" class="product-size">
+                    <option value="">Select Size</option>
+                    <option value="1-2">1-2</option>
+                    <option value="2-3">2-3</option>
+                    <option value="4-5">4-5</option>
+                </select>
+
+                <button class="add-to-cart" data-name="Camel Top" data-price="195.95">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/specials/Cooper-Golfer-scaled.jpg" alt="Cooper Golfer">
+                <p class="description">Cooper Golfer</p>
+                <p class="price">
+                    <span class="original-price">R199.95</span>
+                    <span class="sale-price">R149.95</span>
+                </p>
+
+                <label for="size-CooperGolfer">Size</label>
+                <select id="size-CooperGolfer" class="product-size">
+                    <option value="">Select Size</option>
+                    <option value="1-2">1-2</option>
+                    <option value="2-3">2-3</option>
+                    <option value="4-5">4-5</option>
+                </select>
+                <button class="add-to-cart" data-name="Cooper Golfer" data-price="149.95">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/specials/Danny-Shirt_1.jpg" alt="Danny Shirt">
+                <p class="description">Danny Shirt</p>
+                <p class="price">
+                    <span class="original-price">R149.95</span>
+                    <span class="sale-price">R119.95</span>
+                </p>
+
+                <label for="size-DannyShirt">Size</label>
+                <select id="size-DannyShirt" class="product-size">
+                    <option value="">Select Size</option>
+                    <option value="1-2">1-2</option>
+                    <option value="2-3">2-3</option>
+                    <option value="4-5">4-5</option>
+                </select>
+
+                <button class="add-to-cart" data-name="Danny Shirt" data-price="149.95">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/specials/Henley-Golfer_Black_3-scaled.jpg" alt="Henley Golfer">
+                <p class="description">Henley Golfer Set</p>
+                <p class="price">
+                    <span class="original-price">R299.95</span>
+                    <span class="sale-price">R249.95</span>
+                </p>
+
+                <label for="size-HenleyGolfer">Size</label>
+                <select id="size-HenleyGolfer" class="product-size">
+                    <option value="">Select Size</option>
+                    <option value="1-2">1-2</option>
+                    <option value="2-3">2-3</option>
+                    <option value="4-5">4-5</option>
+                </select>
+
+                <button class="add-to-cart" data-name="Henley Golfer" data-price="299.95">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/specials/Neo-Shirt_Ivory-scaled.jpg" alt="Ivory Neo Shirt">
+                <p class="description">Ivory Neo Shirt</p>
+                <p class="price">
+                    <span class="original-price">R199.95</span>
+                    <span class="sale-price">R149.95</span>
+                </p>
+
+                <label for="size-NeoShirtIvory">Size</label>
+                <select id="size-NeoShirtIvory" class="product-size">
+                    <option value="">Select Size</option>
+                    <option value="1-2">1-2</option>
+                    <option value="2-3">2-3</option>
+                    <option value="4-5">4-5</option>
+                </select>
+
+                <button class="add-to-cart" data-name="Ivory Neo Shirt" data-price="199.95">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/clothes/Boys Red Biker T shirt.png" alt="Boys Red Biker T shirt">
+                <p class="description">Older Boys Red Biker T shirt</p>
+                <p class="price">R195.95</p>
+
+                <label for="size-BoysRedBikerTSHirt">Size</label>
+                <select id="size-BoysRedBikerTSHirt" class="product-size">
+                    <option value="">Select Size</option>
+                    <option value="S">Small</option>
+                    <option value="M">Medium</option>
+                    <option value="L">Large</option>
+                    <option value="XL">Extra Large</option>
+                </select>
+
+                <button class="add-to-cart" data-name="Boys Red Biker T shirt" data-price="195.95">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/clothes/Boys Red Shachet.png" alt="Boys Red Shachet">
+                <p class="description">Older Boys Red Shachet</p>
+                <p class="price">R249.95</p>
+
+                <label for="size-BoysRedShacet">Size</label>
+                <select id="size-BoysRedShacet" class="product-size">
+                    <option value="">Select Size</option>
+                    <option value="S">Small</option>
+                    <option value="M">Medium</option>
+                    <option value="L">Large</option>
+                    <option value="XL">Extra Large</option>
+                </select>
+
+                <button class="add-to-cart" data-name="Boys Red Shachet" data-price="249.95">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/clothes/Girls 3 Top set.png" alt="Girls 3 Top set">
+                <p class="description">Older Girls 3 Top set</p>
+                <p class="price">R299.95</p>
+
+                <label for="size-Girls3TpSet">Size</label>
+                <select id="size-Girls3TpSet" class="product-size">
+                    <option value="">Select Size</option>
+                    <option value="S">Small</option>
+                    <option value="M">Medium</option>
+                    <option value="L">Large</option>
+                    <option value="XL">Extra Large</option>
+                </select>
+
+                <button class="add-to-cart" data-name="Girls 3 Top set" data-price="299.95">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/clothes/Girls Denim Dress & Rainbow T shirt.png" alt="Girls Denim Dress & Rainbow T shirt">
+                <p class="description">Older Girls Denim Dress & Rainbow T shirt</p>
+                <p class="price">R299.95</p>
+
+                <label for="size-GirlsDenimDress&RainbowTshirt">Size</label>
+                <select id="size-GirlsDenimDress&RainbowTshirt" class="product-size">
+                    <option value="">Select Size</option>
+                    <option value="S">Small</option>
+                    <option value="M">Medium</option>
+                    <option value="L">Large</option>
+                    <option value="XL">Extra Large</option>
+                </select>
+
+                <button class="add-to-cart" data-name="Girls Denim Dress & Rainbow T shirt" data-price="299.95">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/clothes/Kids Denim Shorts.png" alt="Kids Denim Shorts">
+                <p class="description">Older Kids Denim Shorts</p>
+                <p class="price">R199.95</p>
+
+                <label for="size-KidsDenimShorts">Size</label>
+                <select id="size-KidsDenimShorts" class="product-size">
+                    <option value="">Select Size</option>
+                    <option value="S">Small</option>
+                    <option value="M">Medium</option>
+                    <option value="L">Large</option>
+                    <option value="XL">Extra Large</option>
+                </select>
+
+                <button class="add-to-cart" data-name="Kids Denim Shorts" data-price="199.95">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/clothes/Cargo Track Pants.png" alt="Cargo Track Pants">
+                <p class="description">Cargo Track Pants</p>
+                <p class="price">R299.95</p>
+
+                <label for="size-CargoTrackPants">Size</label>
+                <select id="size-CargoTrackPants" class="product-size">
+                    <option value="">Select Size</option>
+                    <option value="S">Small</option>
+                    <option value="M">Medium</option>
+                    <option value="L">Large</option>
+                    <option value="XL">Extra Large</option>
+                </select>
+
+                <button class="add-to-cart" data-name="Cargo Track Pants" data-price="299.95">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/clothes/Girls Multi Color Jump Suit.png" alt="Kids Denim Shorts">
+                <p class="description">Girls Multi Color Jump Suit</p>
+                <p class="price">R239.95</p>
+
+                <label for="size-GirlsMultiColorJumpSuit">Size</label>
+                <select id="size-GirlsMultiColorJumpSuit" class="product-size">
+                    <option value="">Select Size</option>
+                    <option value="S">Small</option>
+                    <option value="M">Medium</option>
+                    <option value="L">Large</option>
+                    <option value="XL">Extra Large</option>
+                </select>
+
+                <button class="add-to-cart" data-name="Girls Multi Color Jump Suit" data-price="239.95">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/clothes/Boys Blue Jeans.png" alt="Boys Blue Jeans">
+                <p class="description">Boys Blue Jeans</p>
+                <p class="price">R299.95</p>
+
+                <label for="size-BoysBlueJeans">Size</label>
+                <select id="size-BoysBlueJeans" class="product-size">
+                    <option value="">Select Size</option>
+                    <option value="S">Small</option>
+                    <option value="M">Medium</option>
+                    <option value="L">Large</option>
+                    <option value="XL">Extra Large</option>
+                </select>
+
+                <button class="add-to-cart" data-name="Boys Blue Jeans" data-price="299.95">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p class="copyright">© Dean Aschendorf | All Rights Reserved</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

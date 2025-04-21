@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiddies Fashion</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;900&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="home.html">
+                <img  class="logo" src="./images/logo/logo.png" alt="Kiddies Fashion Logo">
+            </a>            
+        </div>
+
+        <nav class="navbar">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="clothes.html">Clothes</a>
+                <a href="shoes.html" class="active">Shoes</a>
+                <a href="specials.html">Specials</a>
+            </div>
+
+            <div class="nav-icons">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85z"/>
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                </svg>
+
+                <div class="cart-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart4 cart-icon" viewBox="0 0 16 16" onclick="toggleCart()">
+                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5z"/>
+                    </svg>
+                    <span id="cart-count">0</span>
+
+                    <div id="cart-dropdown" class="cart-dropdown">
+                        <h3>Shopping Cart</h3>
+                        <ul id="cart-list"></ul>
+                        <p><strong>Total: R<span id="cart-total">0.00</span></strong></p>
+                        <button class="clear" onclick="clearCart()">Clear Cart</button>
+                        <button class="checkout" onclick="checkout()">Check Out</button> 
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="specials-container">
+        <h2>Kids Shoes</h2>
+        <section class="banner2">
+            <div class="second-banner">
+                <img src="./images/banners/Shoes Banner3.jpg" alt="Fashion Banner">
+            </div>
+        </section>
+        <div class="specials" id="specials">
+            <div class="product">
+                <img src="./images/Shoes/character sneakers.png" alt="character sneakers">
+                <p class="description">Kids Character Sneakers</p>
+                <p class="price">R195.95</p>
+
+                <label for="size-charactersneakers">Size</label>
+                <select id="size-charactersneakers" class="product-size">
+                    <option value="">Select Size</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+
+                <button class="add-to-cart" data-name="Character Sneakers" data-price="195.95">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/Shoes/Luminous Shoes Sneakers.jpg" alt="Luminous Shoes Sneakers">
+                <p class="description">Luminous Shoes Sneakers</p>
+                <p class="price">R349.95</p>
+
+                <label for="size-LuminousShoesSneakers">Size</label>
+                <select id="size-LuminousShoesSneakers" class="product-size">
+                    <option value="">Select Size</option>
+                    <option value="13">13</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+
+                <button class="add-to-cart" data-name="Luminous Shoes Sneakers" data-price="349.95">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/Shoes/Mesh Athletic Sneakers.jpg" alt="Mesh Athletic Sneakers">
+                <p class="description">Mesh Athletic Sneakers</p>
+                <p class="price">R449.95</p>
+
+                <label for="size-LuminousShoesSneakers">Size</label>
+                <select id="size-LuminousShoesSneakers" class="product-size">
+                    <option value="">Select Size</option>
+                    <option value="13">13</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+
+                <button class="add-to-cart" data-name="Mesh Athletic Sneakers" data-price="449.95">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/Shoes/Outdoor boys shoes.png" alt="Outdoor boys shoes">
+                <p class="description">Outdoor Boys Shoes</p>
+                <p class="price">R249.95</p>
+
+                <label for="size-Outdoorboysshoes">Size</label>
+                <select id="size-Outdoorboysshoes" class="product-size">
+                    <option value="">Select Size</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+
+                <button class="add-to-cart" data-name="Outdoor Boys Shoes" data-price="249.95">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="./images/Shoes/toughees white velcro sneakers.png" alt="toughees white velcro sneakers">
+                <p class="description">Toughees White Velcro Sneakers</p>
+                <p class="price">R199.95</p>
+
+                <label for="size-TougheesWhiteVelcroSneakers">Size</label>
+                <select id="size-TougheesWhiteVelcroSneakers" class="product-size">
+                    <option value="">Select Size</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+
+                <button class="add-to-cart" data-name="toughees white velcro sneakers" data-price="199.95">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!--<section class="banner2">
+        <div class="second-banner">
+            <img src="./images/banners/Shoes Banner2.jpg" alt="Fashion Banner">
+        </div>
+    </section>-->
+    <footer>
+        <p class="copyright">© Dean Aschendorf | All Rights Reserved</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
